@@ -7,6 +7,7 @@ echo exec /cockroach/cockroach start \
   --insecure \
   --logtostderr \
   --locality=region=$FLY_REGION \
+  --max-offset 5000ms \
   --max-sql-memory 64MiB \
   --cache 64MiB \
   --cluster-name=$FLY_APP_NAME \
@@ -16,6 +17,7 @@ exec /cockroach/cockroach start \
   --insecure \
   --logtostderr \
   --locality=region=$FLY_REGION \
+  --max-offset 5000ms \
   --max-sql-memory 64MiB \
   --cache 64MiB \
   --cluster-name=$FLY_APP_NAME \
