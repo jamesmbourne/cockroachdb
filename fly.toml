@@ -1,15 +1,14 @@
-app = "cockroachdb-example"
+# fly.toml file generated for jb-cockroach-596 on 2021-07-22T22:23:01+02:00
+
+app = "jb-cockroach-596"
 
 kill_signal = "SIGINT"
-kill_timeout = 60
+kill_timeout = 120
 
 [metrics]
-    port = 8080
-    path = "/_status/vars"
+  path = "/_status/vars"
+  port = 8080
 
 [mount]
-source="cdb_data"
-destination="/cockroach/cockroach-data"
-
-[experimental]
-  cmd = ["shell", "start_fly.sh"]
+  destination = "/cockroach/cockroach-data"
+  source = "cdb_data"
